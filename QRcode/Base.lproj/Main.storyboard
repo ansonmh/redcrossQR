@@ -18,19 +18,19 @@
         <!--Code View Controller-->
         <scene sceneID="PJ5-SY-uql">
             <objects>
-                <viewController id="urg-pZ-RKc" customClass="QRCodeViewController" customModule="QRCodeReader" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="urg-pZ-RKc" customClass="QRCodeViewController" customModule="QRcode" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vOn-zX-ni6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quick Scan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GSn-oE-awy">
-                                <rect key="frame" x="89" y="34" width="197" height="68.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Red Cross" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GSn-oE-awy">
+                                <rect key="frame" x="99" y="20" width="176" height="69"/>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="50"/>
                                 <color key="textColor" red="0.99215686270000003" green="0.81568627449999997" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O5h-jC-QK3">
-                                <rect key="frame" x="112.5" y="258.5" width="150" height="150"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O5h-jC-QK3">
+                                <rect key="frame" x="112" y="422" width="150" height="150"/>
                                 <color key="tintColor" red="0.99215686270000003" green="0.81568627449999997" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="focus"/>
                                 <connections>
@@ -54,7 +54,7 @@
         <!--Scanner Controller-->
         <scene sceneID="UFv-wd-Yh6">
             <objects>
-                <viewController id="k31-AM-sUs" customClass="QRScannerController" customModule="QRCodeReader" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="k31-AM-sUs" customClass="QRScannerController" customModule="QRcode" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="x7G-cc-dgE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
