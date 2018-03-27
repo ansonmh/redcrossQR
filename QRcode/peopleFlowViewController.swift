@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import Firebase
 
 class peopleFlowViewController: UIViewController , UIPickerViewDataSource,
 UIPickerViewDelegate{
+    
+    var ref: DatabaseReference!
+    var selectBcName = ""
     
     let bcname = ["Headquarters Donor Centre",
                   "West Kowloon Donor Centre",
@@ -34,6 +38,10 @@ UIPickerViewDelegate{
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return bcname[row]
     }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        selectBcName = bcname[row]
+    }
 
     @IBOutlet var bcPicker: UIPickerView!
     @IBOutlet weak var peopleFlowNum: UILabel!
@@ -47,6 +55,15 @@ UIPickerViewDelegate{
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        ref = Database.database().reference()
+        ref.child("peopleflow").observeSingleEvent(of: .value, with: { (snapshot) in
+            for child in snapshot.children {
+                let snap = child as! DataSnapshot
+                let key = snap.key
+                let value = snap.value
+                print("key = \(key)  value = \(value!)")
+            }
+        })
     }
 
     override func didReceiveMemoryWarning() {
@@ -54,7 +71,12 @@ UIPickerViewDelegate{
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func update(_ sender: UIButton) {
+        let num = peopleFlowNum.text
+        ref = Database.database().reference()
+        ref.child("peopleflow").child(selectBcName).setValue(num)
+    }
+    
     /*
     // MARK: - Navigation
 

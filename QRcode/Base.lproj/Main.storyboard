@@ -86,6 +86,9 @@
                                 <rect key="frame" x="162" y="536" width="51" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Update"/>
+                                <connections>
+                                    <action selector="update:" destination="s76-GT-ygf" eventType="touchUpInside" id="hx5-OI-kE1"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zNe-vU-nIx">
                                 <rect key="frame" x="166" y="346" width="47" height="21"/>
