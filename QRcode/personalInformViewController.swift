@@ -22,16 +22,16 @@ class personalInformViewController: UIViewController {
     @IBOutlet weak var HKhave: UISegmentedControl!
     @IBOutlet weak var lastDdate: UITextField!
     
-    var url:String?
+    var urlName:String?
     
     
     override func viewDidLoad() {
-        let urlToDisplay = url
-        fName.text = urlToDisplay
+      
+       
 
-        print("page = \(String(describing: urlToDisplay))")
+      
         super.viewDidLoad()
-        
+            fName.text = urlName
         // Do any additional setup after loading the view.
     }
 

@@ -12,7 +12,7 @@ import AVFoundation
 class QRScannerController: UIViewController {
     
     var urlName = ""
-
+    
     @IBOutlet var messageLabel: UILabel!
     
     @IBOutlet var topbar: UIView!
@@ -99,9 +99,10 @@ class QRScannerController: UIViewController {
     
     // MARK: - Helper methods
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? personalInformViewController{
-             destination.url = urlName
-        }
+        
+        var vc = segue.destination as! personalInformViewController
+        vc.urlName=self.urlName
+        
     }
 
     func launchApp(decodedURL: String) {
@@ -114,16 +115,30 @@ class QRScannerController: UIViewController {
         let confirmAction = UIAlertAction(title: "Confirm", style: UIAlertActionStyle.default, handler: { (action) -> Void in
             
             
-            if let url = URL(string: decodedURL) {
-               
-                print("key = \(url)")
-                let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-                let nextViewController = storyBoard.instantiateViewController(withIdentifier: "personalInformViewController") as! personalInformViewController
-                self.present(nextViewController, animated: true, completion: nil)
-                
-            }
+//            if let url = URL(string: decodedURL) {
+//
+//                print("key = \(url)")
+//                let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+//                let nextViewController = storyBoard.instantiateViewController(withIdentifier: "personalInformViewController") as! personalInformViewController
+//                self.present(nextViewController, animated: true, completion: nil)
+//
+//
+//            }
+//
+       
+            self.urlName = decodedURL
+                self.performSegue(withIdentifier: "name", sender: self)
             
-        })
+            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "personalInformViewController") as! personalInformViewController
+            self.present(nextViewController, animated: true, completion: nil)
+            
+            
+            
+        }
+        
+        
+        )
         
         let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil)
         

@@ -190,6 +190,7 @@
                     <connections>
                         <outlet property="messageLabel" destination="LY2-kV-rsK" id="57m-Wd-ho0"/>
                         <outlet property="topbar" destination="Rd7-er-NNX" id="CRC-M1-wgZ"/>
+                        <segue destination="l4G-hs-JhA" kind="presentation" identifier="name" id="bv6-AJ-S21"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cS6-e2-inz" userLabel="First Responder" sceneMemberID="firstResponder"/>
