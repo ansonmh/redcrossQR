@@ -36,7 +36,11 @@ UIPickerViewDelegate{
     }
 
     @IBOutlet var bcPicker: UIPickerView!
+    @IBOutlet weak var peopleFlowNum: UILabel!
     
+    @IBAction func peopleFlowSlider(_ sender: UISlider) {
+        peopleFlowNum.text = String(Int(sender.value))
+    }
     override func viewDidLoad() {
         bcPicker.delegate = self
         bcPicker.dataSource = self
