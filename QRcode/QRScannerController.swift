@@ -10,6 +10,8 @@ import UIKit
 import AVFoundation
 
 class QRScannerController: UIViewController {
+    
+    var urlName = ""
 
     @IBOutlet var messageLabel: UILabel!
     
@@ -96,6 +98,11 @@ class QRScannerController: UIViewController {
     }
     
     // MARK: - Helper methods
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? personalInformViewController{
+             destination.url = urlName
+        }
+    }
 
     func launchApp(decodedURL: String) {
         
@@ -103,14 +110,19 @@ class QRScannerController: UIViewController {
             return
         }
         
-        let alertPrompt = UIAlertController(title: "Open App", message: "You're going to open \(decodedURL)", preferredStyle: .actionSheet)
+        let alertPrompt = UIAlertController(title: "UID", message: "The UID is \(decodedURL)", preferredStyle: .actionSheet)
         let confirmAction = UIAlertAction(title: "Confirm", style: UIAlertActionStyle.default, handler: { (action) -> Void in
             
+            
             if let url = URL(string: decodedURL) {
-                if UIApplication.shared.canOpenURL(url) {
-                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
-                }
+               
+                print("key = \(url)")
+                let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+                let nextViewController = storyBoard.instantiateViewController(withIdentifier: "personalInformViewController") as! personalInformViewController
+                self.present(nextViewController, animated: true, completion: nil)
+                
             }
+            
         })
         
         let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil)
@@ -119,6 +131,7 @@ class QRScannerController: UIViewController {
         alertPrompt.addAction(cancelAction)
         
         present(alertPrompt, animated: true, completion: nil)
+        
     }
 
 }
