@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E5BA065206ACAA800E03D3A /* SignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5BA064206ACAA800E03D3A /* SignViewController.swift */; };
 		3E99BD9E20694F2200AC6168 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E99BD9D20694F2200AC6168 /* AppDelegate.swift */; };
 		3E99BDA020694F2200AC6168 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E99BD9F20694F2200AC6168 /* ViewController.swift */; };
 		3E99BDA320694F2200AC6168 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E99BDA120694F2200AC6168 /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E5BA064206ACAA800E03D3A /* SignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignViewController.swift; sourceTree = "<group>"; };
 		3E99BD9A20694F2200AC6168 /* QRcode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QRcode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E99BD9D20694F2200AC6168 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3E99BD9F20694F2200AC6168 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				3E9AD6FB206A941B00C5EA9E /* personalInformViewController.swift */,
 				3E9AD6F7206A80DF00C5EA9E /* peopleFlowViewController.swift */,
 				3E99BDA420694F2200AC6168 /* QRcode.xcdatamodeld */,
+				3E5BA064206ACAA800E03D3A /* SignViewController.swift */,
 				3E99BDCF20694F5600AC6168 /* QRCodeViewController.swift */,
 				3E99BDCE20694F5600AC6168 /* QRScannerController.swift */,
 			);
@@ -380,6 +383,7 @@
 				3E99BDA620694F2200AC6168 /* QRcode.xcdatamodeld in Sources */,
 				3E9AD6F8206A80DF00C5EA9E /* peopleFlowViewController.swift in Sources */,
 				3E99BDD020694F5600AC6168 /* QRScannerController.swift in Sources */,
+				3E5BA065206ACAA800E03D3A /* SignViewController.swift in Sources */,
 				3E99BDA020694F2200AC6168 /* ViewController.swift in Sources */,
 				3E99BD9E20694F2200AC6168 /* AppDelegate.swift in Sources */,
 				3E9AD6FC206A941B00C5EA9E /* personalInformViewController.swift in Sources */,
