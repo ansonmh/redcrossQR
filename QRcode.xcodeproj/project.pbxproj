@@ -17,6 +17,8 @@
 		3E99BDC120694F2300AC6168 /* QRcodeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E99BDC020694F2300AC6168 /* QRcodeUITests.swift */; };
 		3E99BDD020694F5600AC6168 /* QRScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E99BDCE20694F5600AC6168 /* QRScannerController.swift */; };
 		3E99BDD120694F5600AC6168 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E99BDCF20694F5600AC6168 /* QRCodeViewController.swift */; };
+		3E99BDD32069EDA600AC6168 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E99BDD22069EDA500AC6168 /* GoogleService-Info.plist */; };
+		D41909CFEAD7AE99698783D2 /* Pods_QRcode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95ED9962560027FA7084A12 /* Pods_QRcode.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 		3E99BDC220694F2300AC6168 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3E99BDCE20694F5600AC6168 /* QRScannerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScannerController.swift; sourceTree = "<group>"; };
 		3E99BDCF20694F5600AC6168 /* QRCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
+		3E99BDD22069EDA500AC6168 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9EE1696F27A1819966D22469 /* Pods-QRcode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QRcode.release.xcconfig"; path = "Pods/Target Support Files/Pods-QRcode/Pods-QRcode.release.xcconfig"; sourceTree = "<group>"; };
+		D95ED9962560027FA7084A12 /* Pods_QRcode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QRcode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F65A7F22AF6F7DCF09F26178 /* Pods-QRcode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QRcode.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QRcode/Pods-QRcode.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D41909CFEAD7AE99698783D2 /* Pods_QRcode.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +94,8 @@
 				3E99BDB420694F2300AC6168 /* QRcodeTests */,
 				3E99BDBF20694F2300AC6168 /* QRcodeUITests */,
 				3E99BD9B20694F2200AC6168 /* Products */,
+				63CD8E7CE53401FC44482B37 /* Pods */,
+				9E44EE4DFCF7B005F64276E2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +115,7 @@
 				3E99BD9D20694F2200AC6168 /* AppDelegate.swift */,
 				3E99BD9F20694F2200AC6168 /* ViewController.swift */,
 				3E99BDA120694F2200AC6168 /* Main.storyboard */,
+				3E99BDD22069EDA500AC6168 /* GoogleService-Info.plist */,
 				3E99BDA720694F2200AC6168 /* Assets.xcassets */,
 				3E99BDA920694F2200AC6168 /* LaunchScreen.storyboard */,
 				3E99BDAC20694F2200AC6168 /* Info.plist */,
@@ -134,6 +144,23 @@
 			path = QRcodeUITests;
 			sourceTree = "<group>";
 		};
+		63CD8E7CE53401FC44482B37 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F65A7F22AF6F7DCF09F26178 /* Pods-QRcode.debug.xcconfig */,
+				9EE1696F27A1819966D22469 /* Pods-QRcode.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9E44EE4DFCF7B005F64276E2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D95ED9962560027FA7084A12 /* Pods_QRcode.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -141,9 +168,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3E99BDC520694F2300AC6168 /* Build configuration list for PBXNativeTarget "QRcode" */;
 			buildPhases = (
+				AC15F8D12FAB160F31622F1E /* [CP] Check Pods Manifest.lock */,
 				3E99BD9620694F2200AC6168 /* Sources */,
 				3E99BD9720694F2200AC6168 /* Frameworks */,
 				3E99BD9820694F2200AC6168 /* Resources */,
+				1E0034C6F07BADA4DF0B1DE3 /* [CP] Embed Pods Frameworks */,
+				E51A30358364E94C6888FC28 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -242,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E99BDAB20694F2200AC6168 /* LaunchScreen.storyboard in Resources */,
+				3E99BDD32069EDA600AC6168 /* GoogleService-Info.plist in Resources */,
 				3E99BDA820694F2200AC6168 /* Assets.xcassets in Resources */,
 				3E99BDA320694F2200AC6168 /* Main.storyboard in Resources */,
 			);
@@ -262,6 +293,78 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1E0034C6F07BADA4DF0B1DE3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-QRcode/Pods-QRcode-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QRcode/Pods-QRcode-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC15F8D12FAB160F31622F1E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QRcode-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E51A30358364E94C6888FC28 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QRcode/Pods-QRcode-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3E99BD9620694F2200AC6168 /* Sources */ = {
@@ -436,6 +539,7 @@
 		};
 		3E99BDC620694F2300AC6168 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F65A7F22AF6F7DCF09F26178 /* Pods-QRcode.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -451,6 +555,7 @@
 		};
 		3E99BDC720694F2300AC6168 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9EE1696F27A1819966D22469 /* Pods-QRcode.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
