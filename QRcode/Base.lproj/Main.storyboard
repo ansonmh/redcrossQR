@@ -18,7 +18,7 @@
         <!--Code View Controller-->
         <scene sceneID="PJ5-SY-uql">
             <objects>
-                <viewController id="urg-pZ-RKc" customClass="QRCodeViewController" customModule="QRcode" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="home" id="urg-pZ-RKc" customClass="QRCodeViewController" customModule="QRcode" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vOn-zX-ni6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -437,18 +437,44 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5yP-IE-UGW">
-                                <rect key="frame" x="8" y="165" width="359" height="337"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="8" y="261" width="359" height="337"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0mm-Az-z7B">
-                                <rect key="frame" x="168" y="42" width="39" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="58" y="617" width="39" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                                 <state key="normal" title="Clean"/>
                                 <connections>
                                     <action selector="clean:" destination="jmo-fa-rui" eventType="touchUpInside" id="hCS-gW-rUU"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hWY-Uz-6ae">
+                                <rect key="frame" x="251" y="617" width="49" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submit:" destination="jmo-fa-rui" eventType="touchUpInside" id="y2n-Yp-RcC"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MGR-Lb-UAs">
+                                <rect key="frame" x="8" y="0.0" width="367" height="273"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">You are required to answer the questions 
+honestly by putting a in the correct box. 
+If you do not understand any questions in 
+the form or not certain how to respond, 
+please leave the question blank and seek 
+clarification from our nursing staff later. 
+Our nurse will review your responses, 
+answer your questions and discuss with you 
+IN CONFIDENCE to determine if you can donate
+ today. The information you disclose will be kept 
+in strict confidence. Thank you.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="hBl-8g-03z"/>
@@ -459,7 +485,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ns7-a2-ZSy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3426" y="627"/>
+            <point key="canvasLocation" x="3424.8000000000002" y="626.53673163418296"/>
         </scene>
     </scenes>
     <resources>

@@ -11,7 +11,6 @@ import UIKit
 class SignViewController: UIViewController {
 
     @IBOutlet weak var signView: UIView!
-    
     var path = UIBezierPath()
     var startPoint = CGPoint()
     var touchPoint = CGPoint()
@@ -57,6 +56,22 @@ class SignViewController: UIViewController {
         signView.layer.sublayers = nil
         signView.setNeedsDisplay()
     }
+    
+    @IBAction func submit(_ sender: UIButton) {
+        let alert = UIAlertController(title: "OK", message: "You had confilm the all data", preferredStyle: UIAlertControllerStyle.alert)
+        
+        // add an action (button)
+        let OKAction = UIAlertAction(title: "OK", style: .default, handler: { _ -> Void in
+            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "home") as! QRCodeViewController
+            self.present(nextViewController, animated: true, completion: nil)
+        })
+        // show the alert
+        alert.addAction(OKAction)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
